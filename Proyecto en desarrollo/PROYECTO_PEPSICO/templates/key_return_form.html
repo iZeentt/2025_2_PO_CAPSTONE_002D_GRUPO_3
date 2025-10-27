@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-lg border-0" style="border-radius: 16px;">
+        <div class="card-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px 16px 0 0;">
+          <h3 class="text-white mb-0">
+            <i class="bi bi-box-arrow-in-down"></i> Registrar Devolución de Llave
+          </h3>
+        </div>
+        <div class="card-body p-4">
+          <p class="mb-4" style="color: #5a7a95; font-size: 1rem;">
+            <i class="bi bi-info-circle"></i> Seleccione el vehículo para registrar la devolución de sus llaves
+          </p>
+          
+          <form method="post">
+            <div class="mb-4">
+              <label for="plate" class="form-label fw-bold" style="color: #1e3a52; font-size: 1rem;">
+                <i class="bi bi-car-front"></i> Patente del Vehículo
+              </label>
+              {% if vehicles %}
+                <select id="plate" name="plate" class="form-select form-select-lg" required style="border-radius: 8px;">
+                  <option value="">Seleccione una patente...</option>
+                  {% for v in vehicles %}
+                    <option value="{{ v.plate }}">{{ v.plate }} - {{ v.driver_name or 'Sin conductor' }}</option>
+                  {% endfor %}
+                </select>
+                <div class="form-text" style="color: #5a7a95;">Seleccione el vehículo cuyas llaves están siendo devueltas</div>
+              {% else %}
+                <div class="alert alert-warning">
+                  <i class="bi bi-exclamation-triangle"></i> No hay vehículos registrados en el sistema.
+                </div>
+              {% endif %}
+            </div>
+            
+            <div class="d-grid gap-2">
+              <button class="btn btn-lg" type="submit" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <i class="bi bi-check-circle"></i> Registrar Devolución
+              </button>
+              <a href="{{ url_for('keys_dashboard') }}" class="btn btn-outline-secondary btn-lg" style="border-radius: 8px;">
+                <i class="bi bi-arrow-left"></i> Volver al Dashboard
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+<style>
+  .form-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2) !important;
+    transition: all 0.3s ease;
+  }
+</style>
+{% endblock %}

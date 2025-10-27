@@ -1,0 +1,38 @@
+{% raw %}
+<div class="home-login-panel d-flex align-items-center justify-content-center">
+  <div class="card login-card shadow-sm uiverse-card uiverse-exact uiverse-adam uiverse-bhavesh">
+    <span class="uiverse-band" aria-hidden="true"></span>
+  <div class="card__content" style="background:#07182E;">
+    <div class="card-body">
+      
+      <div class="text-center mb-3">
+        <img src="/static/logo.png" alt="Logo" class="login-logo mb-2" onerror="this.style.display='none'" style="display: none;">
+        <h4 class="card-title">Ingreso al sistema</h4>
+        <p class="text-muted small">Ingresa con tu usuario y contraseña</p>
+      </div>
+  <form method="post" action="/auth/login" class="needs-validation" novalidate="">
+        <div class="mb-3">
+          <label for="username_home" class="form-label">Usuario</label>
+          <input id="username_home" name="username" class="form-control form-control-lg" required="">
+          <div class="invalid-feedback">Por favor ingresa tu usuario.</div>
+        </div>
+        <div class="mb-3">
+          <label for="password_home" class="form-label">Contraseña</label>
+          <input id="password_home" name="password" type="password" class="form-control form-control-lg" required="">
+          <div class="invalid-feedback">Por favor ingresa tu contraseña.</div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="remember_home" name="remember">
+            <label class="form-check-label small" for="remember_home">Recordarme</label>
+          </div>
+          <a href="#" class="small">¿Olvidaste tu contraseña?</a>
+        </div>
+        <button class="btn btn-primary btn-lg w-100" type="submit">Ingresar</button>
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+{% endraw %}

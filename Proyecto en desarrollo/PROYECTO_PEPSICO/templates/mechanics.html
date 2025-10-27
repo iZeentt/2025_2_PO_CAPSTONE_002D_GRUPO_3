@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <div class="d-flex justify-content-between align-items-center">
+    <h2>Mecánicos</h2>
+    <a class="btn btn-success" href="/mechanics/new">Agregar</a>
+  </div>
+  <table class="table mt-3">
+    <thead><tr><th>ID</th><th>Nombre</th><th>Teléfono</th><th>Creado</th></tr></thead>
+    <tbody>
+      {% for m in mechanics %}
+        <tr>
+          <td>{{ m.id }}</td>
+          <td>{{ m.name }}</td>
+          <td>{{ m.phone }}</td>
+          <td>{{ m.created_at }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,555 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<style>
+  .vehicles-container {
+    max-width: 1600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .vehicles-header {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 40px rgba(6, 30, 40, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .vehicles-header h2 {
+    color: #0f4c75;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .vehicles-header h2 svg {
+    width: 32px;
+    height: 32px;
+    color: #60a5fa;
+  }
+  
+  .btn-new-vehicle {
+    padding: 0.75rem 2rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+  }
+  
+  .btn-new-vehicle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+    color: white;
+  }
+  
+  .table-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 40px rgba(6, 30, 40, 0.15);
+    overflow: hidden;
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+    margin: 0 -0.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .vehicles-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+    table-layout: auto;
+  }
+  
+  .vehicles-table thead {
+    background: linear-gradient(135deg, #0f4c75 0%, #1e3a52 100%);
+  }
+  
+  .vehicles-table thead th {
+    color: white;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    border: none;
+    white-space: nowrap;
+  }
+  
+  .vehicles-table thead th:first-child {
+    border-radius: 12px 0 0 0;
+  }
+  
+  .vehicles-table thead th:last-child {
+    border-radius: 0 12px 0 0;
+  }
+  
+  .vehicles-table tbody tr {
+    background: white;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #e0e7ef;
+  }
+  
+  .vehicles-table tbody tr:hover {
+    background: rgba(96, 165, 250, 0.05);
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(6, 30, 40, 0.1);
+  }
+  
+  .vehicles-table tbody tr:last-child {
+    border-bottom: none;
+  }
+  
+  .vehicles-table tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 12px;
+  }
+  
+  .vehicles-table tbody tr:last-child td:last-child {
+    border-radius: 0 0 12px 0;
+  }
+  
+  .vehicles-table tbody td {
+    padding: 1rem 1.25rem;
+    color: #1e3a52;
+    font-size: 0.95rem;
+    border: none;
+    vertical-align: middle;
+  }
+  
+  .vehicles-table tbody td:last-child {
+    padding-right: 1.5rem;
+  }
+  
+  .id-cell {
+    font-weight: 700;
+    color: #60a5fa;
+    font-size: 1.1rem;
+  }
+  
+  .plate-cell {
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    color: #0f4c75;
+    font-size: 1.1rem;
+    background: rgba(96, 165, 250, 0.08);
+    padding: 0.5rem 0.75rem !important;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  
+  .driver-cell {
+    font-weight: 600;
+    color: #1e3a52;
+  }
+  
+  .driver-rut {
+    display: block;
+    font-size: 0.85rem;
+    color: #5a7a95;
+    font-weight: 500;
+    margin-top: 0.15rem;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .status-approved {
+    background: rgba(16, 185, 129, 0.15);
+    color: #065f46;
+  }
+  
+  .status-rejected {
+    background: rgba(239, 68, 68, 0.15);
+    color: #991b1b;
+  }
+  
+  .status-pending {
+    background: rgba(234, 179, 8, 0.15);
+    color: #92400e;
+  }
+  
+  .assigned-cell {
+    font-weight: 600;
+    color: #5a7a95;
+  }
+  
+  .actions-cell {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .btn-action {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border: none;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  
+  .btn-action svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .btn-assign {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    color: white;
+  }
+  
+  .btn-assign:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    color: white;
+  }
+  
+  .btn-approve {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+  }
+  
+  .btn-approve:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    color: white;
+  }
+  
+  .btn-reject {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+  }
+  
+  .btn-reject:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    color: white;
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #5a7a95;
+  }
+  
+  .empty-state svg {
+    width: 80px;
+    height: 80px;
+    color: #cbd5e1;
+    margin-bottom: 1.5rem;
+  }
+  
+  .empty-state h3 {
+    color: #0f4c75;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .empty-state p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .stat-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 4px 12px rgba(6, 30, 40, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stat-icon svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+  }
+  
+  .stat-icon-total {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  }
+  
+  .stat-icon-approved {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  }
+  
+  .stat-icon-rejected {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  }
+  
+  .stat-info h4 {
+    font-size: 0.85rem;
+    color: #5a7a95;
+    margin: 0 0 0.25rem 0;
+    font-weight: 600;
+  }
+  
+  .stat-info p {
+    font-size: 1.75rem;
+    color: #0f4c75;
+    margin: 0;
+    font-weight: 700;
+  }
+  
+  @media (max-width: 768px) {
+    .vehicles-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .vehicles-header h2 {
+      font-size: 1.5rem;
+    }
+    
+    .btn-new-vehicle {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .vehicles-table thead th,
+    .vehicles-table tbody td {
+      padding: 0.75rem 0.5rem;
+      font-size: 0.85rem;
+    }
+    
+    .plate-cell {
+      font-size: 0.95rem;
+    }
+    
+    .actions-cell {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .btn-action {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="vehicles-container">
+  <!-- Header -->
+  <div class="vehicles-header">
+    <h2>
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"/>
+      </svg>
+      Vehículos
+    </h2>
+    {# Only supervisors (and admins if desired) can create vehicles; hide for mechanics #}
+    {% if not (current_user.is_authenticated and current_user.role in ['mechanic','receptionist']) %}
+      <a class="btn-new-vehicle" href="/vehicles/new">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px;">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+        </svg>
+        Nuevo Vehículo
+      </a>
+    {% endif %}
+  </div>
+
+  <!-- Statistics -->
+  {% if vehicles %}
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-icon stat-icon-total">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"/>
+        </svg>
+      </div>
+      <div class="stat-info">
+        <h4>Total Vehículos</h4>
+        <p>{{ vehicles|length }}</p>
+      </div>
+    </div>
+    
+    <div class="stat-card">
+      <div class="stat-icon stat-icon-approved">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <div class="stat-info">
+        <h4>Aprobados</h4>
+        <p>{{ vehicles|selectattr('status', 'equalto', 'approved')|list|length }}</p>
+      </div>
+    </div>
+    
+    <div class="stat-card">
+      <div class="stat-icon stat-icon-rejected">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <div class="stat-info">
+        <h4>Rechazados</h4>
+        <p>{{ vehicles|selectattr('status', 'equalto', 'rejected')|list|length }}</p>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Table -->
+  <div class="table-card">
+    {% if vehicles %}
+    <div class="table-responsive">
+      <table class="vehicles-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Placa</th>
+            <th>Conductor</th>
+            <th>Estado</th>
+            <th>Asignado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for v in vehicles %}
+          <tr>
+            <td class="id-cell">#{{ v.id }}</td>
+            <td>
+              <span class="plate-cell">{{ v.plate }}</span>
+            </td>
+            <td class="driver-cell">
+              {{ v.driver_name }}
+              {% if v.driver_rut %}
+                <span class="driver-rut">RUT: {{ v.driver_rut }}</span>
+              {% endif %}
+            </td>
+            <td>
+              <span class="status-badge status-{{ v.status }}">
+                {% if v.status == 'approved' %}
+                  ✓ Aprobado
+                {% elif v.status == 'rejected' %}
+                  ✖ Rechazado
+                {% else %}
+                  ⏳ {{ v.status }}
+                {% endif %}
+              </span>
+            </td>
+            <td class="assigned-cell">
+              {% set last = v.assignment_set|default([])|last %}
+              {% if assigned_names and assigned_names.get(v.id) %}
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 0.25rem; color: #60a5fa;">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+                {{ assigned_names.get(v.id) }}
+              {% elif last %}
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 0.25rem; color: #60a5fa;">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+                {{ last.mechanic.name }}
+              {% else %}
+                <span style="color: #94a3b8;">Sin asignar</span>
+              {% endif %}
+            </td>
+            <td>
+              <div class="actions-cell">
+                {# Assign button: supervisors can assign regardless of status (so rejected vehicles can be reassigned) #}
+                {% if current_user.is_authenticated and current_user.role == 'supervisor' %}
+                  <a class="btn-action btn-assign" href="/vehicles/{{ v.id }}/assign">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
+                    </svg>
+                    Asignar
+                  </a>
+                {% endif %}
+
+                {# Approve: show when vehicle is not already approved and user has permission #}
+                {% if current_user.is_authenticated and current_user.role in ['admin','supervisor','gatekeeper'] and v.status != 'approved' %}
+                  <a class="btn-action btn-approve" href="/vehicles/{{ v.id }}/approve">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Aprobar
+                  </a>
+                {% endif %}
+
+                {# Reject: show when vehicle is not already rejected and user has permission #}
+                {% if current_user.is_authenticated and current_user.role in ['admin','supervisor'] and v.status != 'rejected' %}
+                  <a class="btn-action btn-reject" href="/vehicles/{{ v.id }}/reject">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    Rechazar
+                  </a>
+                {% endif %}
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <div class="empty-state">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"/>
+      </svg>
+      <h3>No hay vehículos registrados</h3>
+      <p>Comience agregando un nuevo vehículo al sistema</p>
+      {% if not (current_user.is_authenticated and current_user.role in ['mechanic','receptionist']) %}
+        <a class="btn-new-vehicle" href="/vehicles/new" style="display: inline-flex; margin-top: 1rem;">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+          </svg>
+          Agregar Primer Vehículo
+        </a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

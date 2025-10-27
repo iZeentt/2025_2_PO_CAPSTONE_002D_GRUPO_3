@@ -1,0 +1,536 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<style>
+  .workorders-container {
+    max-width: 1600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .workorders-header {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 40px rgba(6, 30, 40, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .workorders-header h2 {
+    color: #0f4c75;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .btn-new-ot {
+    padding: 0.75rem 2rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+  }
+  
+  .btn-new-ot:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+    color: white;
+  }
+  
+  .table-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 40px rgba(6, 30, 40, 0.15);
+    overflow: hidden;
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+    margin: 0 -0.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .workorders-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+    table-layout: auto;
+  }
+  
+  .workorders-table thead {
+    background: linear-gradient(135deg, #0f4c75 0%, #1e3a52 100%);
+  }
+  
+  .workorders-table thead th {
+    color: white;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    border: none;
+    white-space: nowrap;
+  }
+  
+  .workorders-table thead th:first-child {
+    border-radius: 12px 0 0 0;
+  }
+  
+  .workorders-table thead th:last-child {
+    border-radius: 0 12px 0 0;
+  }
+  
+  .workorders-table tbody tr {
+    background: white;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #e0e7ef;
+  }
+  
+  .workorders-table tbody tr:hover {
+    background: rgba(96, 165, 250, 0.05);
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(6, 30, 40, 0.1);
+  }
+  
+  .workorders-table tbody tr:last-child {
+    border-bottom: none;
+  }
+  
+  .workorders-table tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 12px;
+  }
+  
+  .workorders-table tbody tr:last-child td:last-child {
+    border-radius: 0 0 12px 0;
+  }
+  
+  .workorders-table tbody td {
+    padding: 1rem 1.25rem;
+    color: #1e3a52;
+    font-size: 0.95rem;
+    border: none;
+    vertical-align: middle;
+  }
+  
+  .workorders-table tbody td:last-child {
+    padding-right: 1.5rem;
+  }
+  
+  .id-cell {
+    font-weight: 700;
+    color: #60a5fa;
+    font-size: 1.1rem;
+  }
+  
+  .plate-cell {
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    color: #0f4c75;
+    font-size: 1.1rem;
+    background: rgba(96, 165, 250, 0.08);
+    padding: 0.5rem 0.75rem !important;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .status-open {
+    background: rgba(16, 185, 129, 0.15);
+    color: #065f46;
+  }
+  
+  .status-blocked {
+    background: rgba(239, 68, 68, 0.15);
+    color: #991b1b;
+  }
+  
+  .status-duplicate {
+    background: rgba(234, 179, 8, 0.15);
+    color: #92400e;
+  }
+  
+  .status-closed {
+    background: rgba(107, 114, 128, 0.15);
+    color: #374151;
+  }
+  
+  .docs-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  
+  .docs-valid {
+    background: rgba(16, 185, 129, 0.15);
+    color: #065f46;
+  }
+  
+  .docs-invalid {
+    background: rgba(239, 68, 68, 0.15);
+    color: #991b1b;
+  }
+  
+  .docs-badge svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .user-cell {
+    font-weight: 600;
+    color: #5a7a95;
+  }
+  
+  .date-cell {
+    font-size: 0.9rem;
+    color: #5a7a95;
+  }
+  
+  .date-cell strong {
+    display: block;
+    color: #1e3a52;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+  }
+  
+  .btn-view {
+    padding: 0.6rem 1.5rem;
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    border: none;
+    white-space: nowrap;
+    min-width: 90px;
+  }
+  
+  .btn-view:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+    color: white;
+  }
+  
+  .btn-view svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #5a7a95;
+  }
+  
+  .empty-state svg {
+    width: 80px;
+    height: 80px;
+    color: #cbd5e1;
+    margin-bottom: 1.5rem;
+  }
+  
+  .empty-state h3 {
+    color: #0f4c75;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .empty-state p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .stat-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 4px 12px rgba(6, 30, 40, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stat-icon svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+  }
+  
+  .stat-icon-total {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  }
+  
+  .stat-icon-open {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  }
+  
+  .stat-icon-blocked {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  }
+  
+  .stat-info h4 {
+    font-size: 0.85rem;
+    color: #5a7a95;
+    margin: 0 0 0.25rem 0;
+    font-weight: 600;
+  }
+  
+  .stat-info p {
+    font-size: 1.75rem;
+    color: #0f4c75;
+    margin: 0;
+    font-weight: 700;
+  }
+  
+  @media (max-width: 768px) {
+    .workorders-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .workorders-header h2 {
+      font-size: 1.5rem;
+    }
+    
+    .btn-new-ot {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .workorders-table thead th,
+    .workorders-table tbody td {
+      padding: 0.75rem 0.5rem;
+      font-size: 0.85rem;
+    }
+    
+    .plate-cell {
+      font-size: 0.95rem;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="workorders-container">
+  <!-- Header -->
+  <div class="workorders-header">
+    <h2>
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 32px; height: 32px;">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+      </svg>
+      OTs - Recepción
+    </h2>
+    <a class="btn-new-ot" href="/reception/workorders/new">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px;">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+      </svg>
+      Nueva OT
+    </a>
+  </div>
+
+  <!-- Statistics -->
+  {% if orders %}
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-icon stat-icon-total">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+      </div>
+      <div class="stat-info">
+        <h4>Total OTs</h4>
+        <p>{{ orders|length }}</p>
+      </div>
+    </div>
+    
+    <div class="stat-card">
+      <div class="stat-icon stat-icon-open">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <div class="stat-info">
+        <h4>Abiertas</h4>
+        <p>{{ orders|selectattr('status', 'equalto', 'open')|list|length }}</p>
+      </div>
+    </div>
+    
+    <div class="stat-card">
+      <div class="stat-icon stat-icon-blocked">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/>
+        </svg>
+      </div>
+      <div class="stat-info">
+        <h4>Bloqueadas</h4>
+        <p>{{ orders|selectattr('status', 'equalto', 'blocked')|list|length }}</p>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Table -->
+  <div class="table-card">
+    {% if orders %}
+    <div class="table-responsive">
+      <table class="workorders-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Patente</th>
+            <th>Conductor</th>
+            <th>RUT</th>
+            <th>Estado</th>
+            <th>Docs válidos</th>
+            <th>Creado por</th>
+            <th>Creado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for o in orders %}
+          <tr>
+            <td class="id-cell">#{{ o.id }}</td>
+            <td>
+              <span class="plate-cell">{{ o.plate }}</span>
+            </td>
+            <td>
+              {% if plate_driver_info.get(o.plate, {}).get('driver_name') %}
+                <span style="font-weight: 600; color: #1e3a52;">
+                  {{ plate_driver_info.get(o.plate, {}).get('driver_name') }}
+                </span>
+              {% else %}
+                <span style="color: #94a3b8;">-</span>
+              {% endif %}
+            </td>
+            <td>
+              {% if plate_driver_info.get(o.plate, {}).get('driver_rut') %}
+                <span style="font-weight: 500; color: #5a7a95;">
+                  {{ plate_driver_info.get(o.plate, {}).get('driver_rut') }}
+                </span>
+              {% else %}
+                <span style="color: #94a3b8;">-</span>
+              {% endif %}
+            </td>
+            <td>
+              <span class="status-badge status-{{ o.status }}">
+                {% if o.status == 'open' %}
+                  ✓ Abierta
+                {% elif o.status == 'blocked' %}
+                  ✖ Bloqueada
+                {% elif o.status == 'duplicate' %}
+                  ⚠ Duplicada
+                {% elif o.status == 'closed' %}
+                  ● Cerrada
+                {% else %}
+                  {{ o.status }}
+                {% endif %}
+              </span>
+            </td>
+            <td>
+              {% if o.docs_valid %}
+                <span class="docs-badge docs-valid">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Sí
+                </span>
+              {% else %}
+                <span class="docs-badge docs-invalid">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                  No
+                </span>
+              {% endif %}
+            </td>
+            <td class="user-cell">
+              {{ o.created_user.username if o.created_user else o.created_by }}
+            </td>
+            <td class="date-cell">
+              <strong>{{ o.created_at.strftime('%d/%m/%Y') }}</strong>
+              {{ o.created_at.strftime('%H:%M') }}
+            </td>
+            <td>
+              <a class="btn-view" href="/reception/workorders/{{ o.id }}">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                </svg>
+                Ver
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <div class="empty-state">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+      </svg>
+      <h3>No hay órdenes de trabajo</h3>
+      <p>Comience creando una nueva OT haciendo clic en el botón "Nueva OT"</p>
+      <a class="btn-new-ot" href="/reception/workorders/new" style="display: inline-flex; margin-top: 1rem;">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px;">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+        </svg>
+        Crear Primera OT
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
