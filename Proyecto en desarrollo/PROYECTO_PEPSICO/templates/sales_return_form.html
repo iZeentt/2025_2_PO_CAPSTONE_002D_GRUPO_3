@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <h2>Registrar Devolución - Ejecutivo de ventas</h2>
+  <form method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="vehicle_id" class="form-label">Vehículo</label>
+      <select id="vehicle_id" name="vehicle_id" class="form-select" required>
+        {% for v in vehicles %}
+          <option value="{{ v.id }}">{{ v.plate }} - {{ v.driver_name or '' }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="mileage" class="form-label">Kilometraje</label>
+      <input id="mileage" name="mileage" class="form-control" type="number">
+    </div>
+    <div class="mb-3">
+      <label for="photos" class="form-label">Evidencia (fotos)</label>
+      <input id="photos" name="photos" type="file" class="form-control" accept="image/*" multiple>
+    </div>
+    <div class="mb-3">
+      <label for="comment" class="form-label">Observaciones</label>
+      <textarea id="comment" name="comment" class="form-control"></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit">Confirmar devolución</button>
+  </form>
+{% endblock %}

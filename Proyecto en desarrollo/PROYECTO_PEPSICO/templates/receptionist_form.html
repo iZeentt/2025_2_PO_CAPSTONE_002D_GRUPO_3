@@ -1,0 +1,530 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<style>
+  .reception-form-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .reception-form-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(6, 30, 40, 0.25);
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(96, 165, 250, 0.2);
+  }
+  
+  .form-header h2 {
+    color: #0f4c75;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-header p {
+    color: #5a7a95;
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .form-section {
+    margin-bottom: 2rem;
+  }
+  
+  .form-section-title {
+    color: #0f4c75;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .form-section-title svg {
+    width: 24px;
+    height: 24px;
+    color: #60a5fa;
+  }
+  
+  .form-label {
+    color: #1e3a52;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .form-select, .form-control {
+    border: 2px solid #e0e7ef;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+    color: #1e3a52;
+  }
+  
+  .form-select:focus, .form-control:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.1);
+    outline: none;
+  }
+  
+  .guard-entries-section {
+    background: rgba(96, 165, 250, 0.05);
+    border: 2px solid rgba(96, 165, 250, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .guard-entry-card {
+    background: white;
+    border: 2px solid #e0e7ef;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .guard-entry-card:hover {
+    border-color: #60a5fa;
+    box-shadow: 0 4px 12px rgba(96, 165, 250, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .guard-entry-card input[type="radio"] {
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .guard-entry-card.selected {
+    border-color: #60a5fa;
+    background: rgba(96, 165, 250, 0.08);
+    box-shadow: 0 4px 12px rgba(96, 165, 250, 0.2);
+  }
+  
+  .entry-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 0.75rem;
+  }
+  
+  .entry-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .entry-info-item svg {
+    width: 18px;
+    height: 18px;
+    color: #60a5fa;
+    flex-shrink: 0;
+  }
+  
+  .entry-info-item strong {
+    color: #5a7a95;
+    font-size: 0.85rem;
+  }
+  
+  .entry-info-item span {
+    color: #1e3a52;
+    font-weight: 600;
+  }
+  
+  .manual-entry-toggle {
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+  
+  .manual-entry-toggle button {
+    background: none;
+    border: 2px solid #60a5fa;
+    color: #0f4c75;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .manual-entry-toggle button:hover {
+    background: #60a5fa;
+    color: white;
+  }
+  
+  .manual-entry-section {
+    display: none;
+    background: rgba(234, 179, 8, 0.05);
+    border: 2px solid rgba(234, 179, 8, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .manual-entry-section.active {
+    display: block;
+  }
+  
+  .info-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(96, 165, 250, 0.15);
+    color: #0f4c75;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+  
+  .warning-badge {
+    background: rgba(234, 179, 8, 0.15);
+    color: #92400e;
+  }
+  
+  .validation-checkbox-container {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(5, 150, 105, 0.05) 100%);
+    border: 2px solid rgba(16, 185, 129, 0.25);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .validation-checkbox-container:hover {
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+  }
+  
+  .validation-checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    padding-left: 40px;
+  }
+  
+  .validation-checkbox-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkbox-custom {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 28px;
+    width: 28px;
+    background-color: white;
+    border: 3px solid #cbd5e1;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .validation-checkbox-label:hover .checkbox-custom {
+    border-color: #10b981;
+  }
+  
+  .validation-checkbox-label input:checked ~ .checkbox-custom {
+    background-color: #10b981;
+    border-color: #10b981;
+  }
+  
+  .checkbox-custom:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 9px;
+    top: 5px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  
+  .validation-checkbox-label input:checked ~ .checkbox-custom:after {
+    display: block;
+  }
+  
+  .checkbox-text {
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+    color: #065f46;
+    font-weight: 600;
+  }
+  
+  .checkbox-text svg {
+    flex-shrink: 0;
+  }
+  
+  .checkbox-text strong {
+    color: #065f46;
+  }
+  
+  .btn-submit {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    border: none;
+    color: white;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4);
+  }
+  
+  .empty-guard-entries {
+    text-align: center;
+    padding: 2rem;
+    color: #5a7a95;
+  }
+  
+  .empty-guard-entries svg {
+    width: 64px;
+    height: 64px;
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .reception-form-card {
+      padding: 1.5rem;
+    }
+    
+    .form-header h2 {
+      font-size: 1.5rem;
+    }
+    
+    .entry-info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="reception-form-container">
+  <div class="reception-form-card">
+    <div class="form-header">
+      <h2>📋 Crear Nueva Orden de Trabajo</h2>
+      <p>Seleccione un registro de ingreso del guardia o ingrese manualmente</p>
+    </div>
+    
+    <form method="post" id="otForm">
+      <!-- Sección: Registros de Guardia -->
+      {% if guard_entries %}
+      <div class="form-section">
+        <div class="form-section-title">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          </svg>
+          Registros de Ingreso del Guardia
+        </div>
+        
+        <div class="guard-entries-section">
+          <span class="info-badge">✅ {{ guard_entries|length }} registro{% if guard_entries|length != 1 %}s{% endif %} disponible{% if guard_entries|length != 1 %}s{% endif %}</span>
+          
+          <div style="margin-top: 1rem; max-height: 400px; overflow-y: auto;">
+            {% for entry in guard_entries %}
+            <label class="guard-entry-card" data-entry-id="{{ entry.id }}">
+              <div style="display: flex; align-items: flex-start;">
+                <input type="radio" name="access_entry_id" value="{{ entry.id }}" {% if loop.first %}checked{% endif %}>
+                <div style="flex: 1;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                    <div style="font-size: 1.3rem; font-weight: 700; color: #0f4c75; font-family: 'Courier New', monospace;">
+                      🚗 {{ entry.plate }}
+                    </div>
+                    <div style="font-size: 0.85rem; color: #5a7a95;">
+                      {{ entry.created_at.strftime('%d/%m/%Y %H:%M') }}
+                    </div>
+                  </div>
+                  
+                  <div class="entry-info-grid">
+                    {% if entry.driver_name %}
+                    <div class="entry-info-item">
+                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                      </svg>
+                      <div>
+                        <strong>Conductor:</strong>
+                        <span>{{ entry.driver_name }}</span>
+                      </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if entry.driver_rut %}
+                    <div class="entry-info-item">
+                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"/>
+                      </svg>
+                      <div>
+                        <strong>RUT:</strong>
+                        <span>{{ entry.driver_rut }}</span>
+                      </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% if entry.photos %}
+                    <div class="entry-info-item">
+                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                      </svg>
+                      <div>
+                        <strong>Fotos:</strong>
+                        <span>{{ entry.photos|length }} archivo{% if entry.photos|length != 1 %}s{% endif %}</span>
+                      </div>
+                    </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </label>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      
+      <div class="manual-entry-toggle">
+        <button type="button" onclick="toggleManualEntry()">
+          ✏️ ¿No encuentra el registro? Ingresar patente manualmente
+        </button>
+      </div>
+      {% endif %}
+      
+      <!-- Sección: Ingreso Manual -->
+      <div class="manual-entry-section {% if not guard_entries %}active{% endif %}" id="manualEntrySection">
+        <div class="form-section-title">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+          </svg>
+          Ingreso Manual de Patente
+        </div>
+        
+        <span class="info-badge warning-badge">⚠️ Use esta opción solo si el vehículo no fue registrado por el guardia</span>
+        
+        <div class="mb-3" style="margin-top: 1rem;">
+          <label for="manual_plate" class="form-label">Patente del Vehículo</label>
+          <input 
+            id="manual_plate" 
+            name="plate" 
+            class="form-control" 
+            placeholder="Ej: ABC123"
+            value="{{ plate or '' }}"
+          >
+        </div>
+      </div>
+      
+      <!-- Sección: Notas y Validación -->
+      <div class="form-section">
+        <div class="form-section-title">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+          </svg>
+          Información Adicional
+        </div>
+        
+        <div class="mb-3">
+          <label for="notes" class="form-label">Observaciones (Opcional)</label>
+          <textarea 
+            id="notes" 
+            name="notes" 
+            class="form-control" 
+            rows="4"
+            placeholder="Ingrese cualquier observación o detalle adicional sobre el vehículo o el servicio..."
+          ></textarea>
+        </div>
+        
+        <div class="validation-checkbox-container">
+          <label class="validation-checkbox-label">
+            <input type="checkbox" name="docs_valid" id="docs_valid">
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px; margin-right: 0.5rem;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <strong>La documentación técnica del vehículo es válida y está completa</strong>
+            </span>
+          </label>
+        </div>
+      </div>
+      
+      <button class="btn btn-primary btn-submit" type="submit">
+        🚀 Crear Orden de Trabajo
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Resaltar card seleccionada
+  document.querySelectorAll('.guard-entry-card').forEach(card => {
+    card.addEventListener('click', function() {
+      document.querySelectorAll('.guard-entry-card').forEach(c => c.classList.remove('selected'));
+      this.classList.add('selected');
+      // Limpiar el campo manual cuando se selecciona un registro
+      document.getElementById('manual_plate').value = '';
+    });
+  });
+  
+  // Marcar como seleccionada la primera card al cargar
+  const firstCard = document.querySelector('.guard-entry-card');
+  if (firstCard) {
+    firstCard.classList.add('selected');
+  }
+  
+  // Toggle ingreso manual
+  function toggleManualEntry() {
+    const section = document.getElementById('manualEntrySection');
+    section.classList.toggle('active');
+    
+    if (section.classList.contains('active')) {
+      // Desmarcar todos los radios
+      document.querySelectorAll('input[name="access_entry_id"]').forEach(radio => {
+        radio.checked = false;
+      });
+      document.querySelectorAll('.guard-entry-card').forEach(c => c.classList.remove('selected'));
+    }
+  }
+  
+  // Validar que al menos uno esté seleccionado
+  document.getElementById('otForm').addEventListener('submit', function(e) {
+    const hasRadioSelected = document.querySelector('input[name="access_entry_id"]:checked');
+    const hasManualPlate = document.getElementById('manual_plate').value.trim();
+    
+    if (!hasRadioSelected && !hasManualPlate) {
+      e.preventDefault();
+      alert('Por favor seleccione un registro del guardia o ingrese una patente manualmente');
+    }
+  });
+</script>
+{% endblock %}

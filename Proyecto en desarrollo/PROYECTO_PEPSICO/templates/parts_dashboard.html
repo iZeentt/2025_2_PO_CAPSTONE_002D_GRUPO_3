@@ -1,0 +1,182 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container-fluid mt-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="card shadow-lg border-0" style="background: rgba(255,255,255,0.98); border-radius: 16px;">
+        <div class="card-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px 16px 0 0;">
+          <h3 class="text-white mb-0">
+            <i class="bi bi-box-seam"></i> Panel de Repuestos
+          </h3>
+        </div>
+        <div class="card-body p-4">
+          
+          <!-- Alertas de Stock Bajo -->
+          {% if low_stock_parts %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong><i class="bi bi-exclamation-triangle"></i> Alerta de Stock Bajo:</strong>
+            <ul class="mb-0 mt-2">
+              {% for part in low_stock_parts %}
+              <li>
+                <strong>{{ part.code }}</strong> - {{ part.name }} 
+                (Stock: {{ part.stock }}, Mínimo: {{ part.min_stock }})
+              </li>
+              {% endfor %}
+            </ul>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endif %}
+
+          <!-- Estadísticas -->
+          <div class="row mb-4">
+            <div class="col-md-3">
+              <div class="card text-white bg-primary">
+                <div class="card-body">
+                  <h5 class="card-title">Total Repuestos</h5>
+                  <h2>{{ parts|length }}</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card text-white bg-warning">
+                <div class="card-body">
+                  <h5 class="card-title">Stock Bajo</h5>
+                  <h2>{{ low_stock_parts|length }}</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card text-white bg-info">
+                <div class="card-body">
+                  <h5 class="card-title">Solicitudes Pendientes</h5>
+                  <h2>{{ pending_requests_count }}</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card text-white bg-success">
+                <div class="card-body">
+                  <h5 class="card-title">Entregas Hoy</h5>
+                  <h2>{{ recent_deliveries|length }}</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Acciones Rápidas -->
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h5 class="mb-3">Acciones Rápidas</h5>
+              <a href="{{ url_for('parts_requests_list') }}" class="btn btn-warning me-2">
+                <i class="bi bi-inbox"></i> Ver Solicitudes
+              </a>
+              <a href="{{ url_for('part_create') }}" class="btn btn-primary me-2">
+                <i class="bi bi-plus-circle"></i> Nuevo Repuesto
+              </a>
+              <a href="{{ url_for('part_delivery_create') }}" class="btn btn-success me-2">
+                <i class="bi bi-box-arrow-right"></i> Registrar Entrega
+              </a>
+              <a href="{{ url_for('part_delivery_history') }}" class="btn btn-info me-2">
+                <i class="bi bi-clock-history"></i> Historial de Entregas
+              </a>
+              <a href="{{ url_for('parts_list') }}" class="btn btn-secondary">
+                <i class="bi bi-list-ul"></i> Ver Todos los Repuestos
+              </a>
+            </div>
+          </div>
+
+          <!-- Tabla de Repuestos -->
+          <h5 class="mb-3">Repuestos Registrados</h5>
+          {% if parts %}
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <tr>
+                  <th class="text-white">Código</th>
+                  <th class="text-white">Nombre</th>
+                  <th class="text-white">Stock</th>
+                  <th class="text-white">Stock Mínimo</th>
+                  <th class="text-white">Estado</th>
+                  <th class="text-white">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for part in parts %}
+                <tr>
+                  <td><strong>{{ part.code }}</strong></td>
+                  <td>{{ part.name }}</td>
+                  <td>
+                    <span class="badge {% if part.stock <= part.min_stock %}bg-danger{% elif part.stock <= part.min_stock * 2 %}bg-warning{% else %}bg-success{% endif %}">
+                      {{ part.stock }}
+                    </span>
+                  </td>
+                  <td>{{ part.min_stock }}</td>
+                  <td>
+                    {% if part.stock <= part.min_stock %}
+                      <span class="badge bg-danger">Crítico</span>
+                    {% elif part.stock <= part.min_stock * 2 %}
+                      <span class="badge bg-warning">Bajo</span>
+                    {% else %}
+                      <span class="badge bg-success">Normal</span>
+                    {% endif %}
+                  </td>
+                  <td>
+                    <a href="{{ url_for('part_edit', part_id=part.id) }}" class="btn btn-sm btn-outline-primary">
+                      <i class="bi bi-pencil"></i> Editar
+                    </a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          {% else %}
+          <div class="alert alert-info">
+            No hay repuestos registrados. <a href="{{ url_for('part_create') }}">Agregar el primero</a>
+          </div>
+          {% endif %}
+
+          <!-- Entregas Recientes -->
+          {% if recent_deliveries %}
+          <h5 class="mt-4 mb-3">Entregas Recientes</h5>
+          <div class="table-responsive">
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Repuesto</th>
+                  <th>Mecánico</th>
+                  <th>Cantidad</th>
+                  <th>Entregado por</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for delivery in recent_deliveries %}
+                <tr>
+                  <td>{{ delivery.created_at.strftime('%d/%m/%Y %H:%M') }}</td>
+                  <td>{{ delivery.part.code }} - {{ delivery.part.name }}</td>
+                  <td>
+                    {% if delivery.mechanic.user %}
+                      {{ delivery.mechanic.user.username }}
+                    {% else %}
+                      {{ delivery.mechanic.name }}
+                    {% endif %}
+                  </td>
+                  <td><span class="badge bg-primary">{{ delivery.quantity }}</span></td>
+                  <td>{{ delivery.delivered_user.username }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+{% endblock %}

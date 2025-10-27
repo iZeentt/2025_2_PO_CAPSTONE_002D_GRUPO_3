@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <!-- Top decorative band removed -->
+  <section class="py-0">
+    <div class="container py-0">
+      <div class="row align-items-start">
+        <div class="col-lg-8">
+          <div class="mb-0 w-100 home-hero pattern-bg">
+            <div class="cards">
+              <div class="uiverse-parent">
+                <div class="uiverse-imtausef-card">
+                  <!-- sólo la imagen recibe el efecto 3D -->
+                  <img src="{{ url_for('static', filename='brand_images/Flota de camiones2.jpg') }}" alt="Banner" class="img-fluid w-100 card_media uiverse-hero-img" width="840" height="336" style="width:840px; height:336px; max-width:100%; object-fit:cover; display:block;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="px-3 py-4">
+            <h1 class="display-5 fw-bold text-white home-hero-title">Plataforma de Gestión de Flota — PepsiCo Chile</h1>
+            <p class="fs-5 mt-3 hero-copy">Gestione y optimice el ingreso de vehículos a taller mediante un único sistema web seguro y centralizado.</p>
+            <p class="lead hero-copy">Conecte a conductores, supervisores y mecánicos en un flujo de trabajo digital que facilita el registro de ingresos, la gestión de pausas, la verificación documental y la generación de reportes en tiempo real, incrementando la eficiencia operativa, la trazabilidad y el control de la flota a nivel nacional.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 d-none d-lg-flex justify-content-end">
+          {% if not current_user.is_authenticated %}
+            {% include '_login_panel.html' %}
+          {% endif %}
+        </div>
+        <!-- Mobile: show login panel below content -->
+        <div class="col-12 d-lg-none mt-4">
+          {% if not current_user.is_authenticated %}
+            {% include '_login_panel.html' %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

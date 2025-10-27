@@ -1,0 +1,451 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<style>
+  .guard-form-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .guard-form-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(6, 30, 40, 0.25);
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .guard-form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(96, 165, 250, 0.2);
+  }
+  
+  .guard-form-header h2 {
+    color: #0f4c75;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .guard-form-header p {
+    color: #5a7a95;
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .form-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-section-title {
+    color: #0f4c75;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .form-section-icon {
+    width: 24px;
+    height: 24px;
+    color: #60a5fa;
+  }
+  
+  .form-label {
+    color: #1e3a52;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .form-label-required::after {
+    content: ' *';
+    color: #ef4444;
+    font-weight: 700;
+  }
+  
+  .form-control {
+    border: 2px solid #e0e7ef;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+    color: #1e3a52;
+  }
+  
+  .form-control:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.1);
+    outline: none;
+  }
+  
+  .form-control::placeholder {
+    color: #94a3b8;
+  }
+  
+  .file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .file-input-custom {
+    border: 2px dashed #60a5fa;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    background: rgba(96, 165, 250, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .file-input-custom:hover {
+    background: rgba(96, 165, 250, 0.1);
+    border-color: #3b82f6;
+  }
+  
+  .file-input-custom svg {
+    width: 48px;
+    height: 48px;
+    color: #60a5fa;
+    margin-bottom: 0.5rem;
+  }
+  
+  .file-input-custom p {
+    color: #0f4c75;
+    font-weight: 600;
+    margin: 0.5rem 0 0.25rem 0;
+  }
+  
+  .file-input-custom small {
+    color: #5a7a95;
+    font-size: 0.875rem;
+  }
+  
+  .form-control[type="file"] {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+  
+  .file-preview {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 8px;
+  }
+  
+  .file-preview.active {
+    display: block;
+  }
+  
+  .file-preview-text {
+    color: #16a34a;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .file-preview-text svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .btn-submit {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    border: none;
+    color: white;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4);
+  }
+  
+  .btn-submit:active {
+    transform: translateY(0);
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .guard-form-card {
+      padding: 1.5rem;
+    }
+    
+    .guard-form-header h2 {
+      font-size: 1.5rem;
+    }
+    
+    .form-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    .file-input-custom {
+      padding: 1.5rem;
+    }
+  }
+  
+  .info-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(96, 165, 250, 0.15);
+    color: #0f4c75;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="guard-form-container">
+  <div class="guard-form-card">
+    <div class="guard-form-header">
+      <h2>📋 Registro de Ingreso - Guardia</h2>
+      <p>Complete la información del vehículo que ingresa a las instalaciones</p>
+    </div>
+    
+    <form method="post" enctype="multipart/form-data" id="guardForm">
+      <!-- Sección: Información del Vehículo -->
+      <div class="form-section">
+        <div class="form-section-title">
+          <svg class="form-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          </svg>
+          Información del Vehículo
+        </div>
+        
+        <div class="mb-3">
+          <label for="plate" class="form-label form-label-required">Patente del Vehículo</label>
+          <input 
+            id="plate" 
+            name="plate" 
+            class="form-control" 
+            placeholder="Ej: ABCD12"
+            required
+            autocomplete="off"
+            pattern="[A-Za-z0-9\-]+"
+            title="Solo letras, números y guiones"
+          >
+          <span class="info-badge">⚠️ Campo obligatorio</span>
+        </div>
+      </div>
+
+      <!-- Sección: Información del Conductor -->
+      <div class="form-section">
+        <div class="form-section-title">
+          <svg class="form-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+          </svg>
+          Información del Conductor (Opcional)
+        </div>
+        
+        <div class="form-grid">
+          <div class="mb-3">
+            <label for="driver_name" class="form-label">Nombre Completo</label>
+            <input 
+              id="driver_name" 
+              name="driver_name" 
+              class="form-control"
+              placeholder="Ej: Juan Pérez"
+              autocomplete="off"
+            >
+          </div>
+          
+          <div class="mb-3">
+            <label for="driver_rut" class="form-label">RUT del Conductor</label>
+            <input 
+              id="driver_rut" 
+              name="driver_rut" 
+              class="form-control"
+              placeholder="Ej: 12.345.678-9"
+              autocomplete="off"
+            >
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="mb-3">
+            <label for="region" class="form-label">Región</label>
+            <select 
+              id="region" 
+              name="region" 
+              class="form-control"
+            >
+              <option value="">Seleccione una región</option>
+              <option value="Región de Arica y Parinacota">Región de Arica y Parinacota</option>
+              <option value="Región de Tarapacá">Región de Tarapacá</option>
+              <option value="Región de Antofagasta">Región de Antofagasta</option>
+              <option value="Región de Atacama">Región de Atacama</option>
+              <option value="Región de Coquimbo">Región de Coquimbo</option>
+              <option value="Región de Valparaíso">Región de Valparaíso</option>
+              <option value="Región Metropolitana de Santiago">Región Metropolitana de Santiago</option>
+              <option value="Región del Libertador Gral. Bernardo O'Higgins">Región del Libertador Gral. Bernardo O'Higgins</option>
+              <option value="Región del Maule">Región del Maule</option>
+              <option value="Región de Ñuble">Región de Ñuble</option>
+              <option value="Región del Biobío">Región del Biobío</option>
+              <option value="Región de La Araucanía">Región de La Araucanía</option>
+              <option value="Región de Los Ríos">Región de Los Ríos</option>
+              <option value="Región de Los Lagos">Región de Los Lagos</option>
+              <option value="Región Aysén del Gral. Carlos Ibáñez del Campo">Región Aysén del Gral. Carlos Ibáñez del Campo</option>
+              <option value="Región de Magallanes y de la Antártica Chilena">Región de Magallanes y de la Antártica Chilena</option>
+            </select>
+          </div>
+          
+          <div class="mb-3">
+            <label for="comuna" class="form-label">Comuna</label>
+            <select 
+              id="comuna" 
+              name="comuna" 
+              class="form-control"
+              disabled
+            >
+              <option value="">Primero seleccione una región</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección: Fotografías -->
+      <div class="form-section">
+        <div class="form-section-title">
+          <svg class="form-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          Fotografías del Vehículo
+        </div>
+        
+        <div class="file-input-wrapper">
+          <label for="photos" class="file-input-custom">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+            <p>Haga clic o arrastre fotos aquí</p>
+            <small>Puede seleccionar múltiples archivos • Formatos: JPG, PNG, GIF</small>
+            <span class="info-badge mt-2">⚠️ Obligatorio - Al menos 1 foto</span>
+          </label>
+          <input 
+            id="photos" 
+            name="photos" 
+            type="file" 
+            class="form-control" 
+            accept="image/*" 
+            multiple 
+            required
+          >
+        </div>
+        
+        <div id="filePreview" class="file-preview">
+          <div class="file-preview-text">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span id="fileCount">0 archivos seleccionados</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-submit" type="submit">
+        🚀 Registrar Ingreso
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Preview de archivos seleccionados
+  document.getElementById('photos').addEventListener('change', function(e) {
+    const fileCount = e.target.files.length;
+    const preview = document.getElementById('filePreview');
+    const countText = document.getElementById('fileCount');
+    
+    if (fileCount > 0) {
+      preview.classList.add('active');
+      countText.textContent = fileCount + ' archivo' + (fileCount > 1 ? 's' : '') + ' seleccionado' + (fileCount > 1 ? 's' : '');
+    } else {
+      preview.classList.remove('active');
+    }
+  });
+  
+  // Convertir patente a mayúsculas automáticamente
+  document.getElementById('plate').addEventListener('input', function(e) {
+    e.target.value = e.target.value.toUpperCase();
+  });
+  
+  // Formato RUT chileno básico (agregar guiones)
+  document.getElementById('driver_rut').addEventListener('input', function(e) {
+    let value = e.target.value.replace(/[^\dkK]/g, '');
+    if (value.length > 1) {
+      value = value.slice(0, -1).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + '-' + value.slice(-1);
+    }
+    e.target.value = value;
+  });
+
+  // Cargar comunas cuando se selecciona una región
+  document.getElementById('region').addEventListener('change', function(e) {
+    const region = e.target.value;
+    const comunaSelect = document.getElementById('comuna');
+    
+    // Limpiar opciones actuales
+    comunaSelect.innerHTML = '<option value="">Cargando comunas...</option>';
+    comunaSelect.disabled = true;
+    
+    if (region) {
+      // Hacer petición al API para obtener comunas
+      fetch(`/api/comunas/${encodeURIComponent(region)}`)
+        .then(response => response.json())
+        .then(comunas => {
+          comunaSelect.innerHTML = '<option value="">Seleccione una comuna</option>';
+          comunas.forEach(comuna => {
+            const option = document.createElement('option');
+            option.value = comuna;
+            option.textContent = comuna;
+            comunaSelect.appendChild(option);
+          });
+          comunaSelect.disabled = false;
+        })
+        .catch(error => {
+          console.error('Error al cargar comunas:', error);
+          comunaSelect.innerHTML = '<option value="">Error al cargar comunas</option>';
+          comunaSelect.disabled = true;
+        });
+    } else {
+      comunaSelect.innerHTML = '<option value="">Primero seleccione una región</option>';
+      comunaSelect.disabled = true;
+    }
+  });
+</script>
+{% endblock %}

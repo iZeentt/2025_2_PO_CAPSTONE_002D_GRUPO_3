@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#e9f0fb"/>
+      <stop offset="100%" stop-color="#dfe9f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g1)" />
+
+  <!-- Road perspective -->
+  <polygon points="0,700 1920,700 1320,1080 600,1080" fill="#3b3b3b" opacity="0.95" />
+  <!-- Road center dashed line -->
+  <g stroke="#ffd24a" stroke-width="12" stroke-linecap="round" stroke-dasharray="60 40">
+    <path d="M960 700 L960 1080" fill="none" />
+  </g>
+
+  <!-- Simple truck silhouette -->
+  <g transform="translate(300,520) scale(1.2)">
+    <rect x="0" y="-80" width="240" height="80" rx="8" fill="#1f6feb" />
+    <rect x="180" y="-140" width="120" height="120" rx="6" fill="#0b4bb2" />
+    <circle cx="60" cy="10" r="26" fill="#222" />
+    <circle cx="180" cy="10" r="26" fill="#222" />
+    <circle cx="60" cy="16" r="18" fill="#6b6b6b" />
+    <circle cx="180" cy="16" r="18" fill="#6b6b6b" />
+  </g>
+
+  <!-- Distant silhouettes (containers/trucks) -->
+  <g opacity="0.6" fill="#2c5aa0">
+    <rect x="1400" y="560" width="120" height="50" rx="4" />
+    <rect x="1540" y="540" width="80" height="70" rx="4" />
+  </g>
+
+  <!-- Subtle overlay shapes -->
+  <ellipse cx="1500" cy="150" rx="420" ry="120" fill="#ffffff" opacity="0.02"/>
+  <ellipse cx="300" cy="120" rx="360" ry="100" fill="#000000" opacity="0.02"/>
+</svg>

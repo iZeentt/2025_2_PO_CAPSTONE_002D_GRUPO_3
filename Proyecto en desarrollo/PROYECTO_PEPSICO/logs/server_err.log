@@ -1,0 +1,1312 @@
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 457-253-663
+127.0.0.1 - - [21/Oct/2025 21:04:55] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:04:55] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:04:55] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:04:55] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:04:55] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:04:55] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:04:56] "GET /favicon.ico HTTP/1.1" 404 -
+ * Detected change in 'C:\\Users\\admin\\Downloads\\PROYECTO_PEPSICO\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 457-253-663
+127.0.0.1 - - [21/Oct/2025 21:05:12] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:05:12] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:05:12] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:05:12] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:05:12] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:05:12] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:06:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:06:28] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:06:28] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:06:28] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:06:29] "GET /static/login.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:06:29] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:06:29] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:06:47] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:06:47] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:06:47] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:06:47] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:06:47] "GET /static/login.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:06:47] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:00] "POST /auth/login HTTP/1.1" 302 -
+C:\Users\admin\Downloads\PROYECTO_PEPSICO\app.py:27: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+  return User.query.get(int(user_id))
+127.0.0.1 - - [21/Oct/2025 21:07:00] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:00] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:00] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:00] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:01] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:01] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:01] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:01] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:09] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:09] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:09] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:09] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:09] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:09] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:09] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:09] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:09] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:09] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:09] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:10] "GET /vehicles HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:10] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:10] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:10] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:11] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:11] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:11] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:11] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:12] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:12] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:12] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:12] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:12] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:13] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:07:13] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:13] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:13] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:13] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:13] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:15] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:15] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:15] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:15] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:15] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:15] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:15] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:15] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:15] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:15] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:15] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:15] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:15] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:16] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:16] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:16] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:16] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:16] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:16] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:16] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:16] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:16] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:16] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:17] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:07:26] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:26] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:07:26] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:08:57] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:08:57] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:08:57] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:08:57] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:08:57] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:08:57] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:09:00] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:09:00] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:09:00] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:09:00] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:09:00] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:09:00] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:09:00] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:09:37] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:09:37] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:09:37] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:09:37] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:09:37] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:09:37] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:20:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:20:49] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:20:49] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:20:49] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:20:49] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:20:49] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:22:48] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:22:48] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:22:48] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:22:48] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:22:48] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:22:48] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:29:40] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:29:40] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:29:40] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:29:40] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:29:40] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:29:40] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:31:45] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:31:45] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:31:45] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:31:45] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:31:45] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:31:45] "GET /static/brand_images/ChatGPT%20Image%2021%20oct%202025,%2009_28_01%20p.m..png HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:31:45] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:32:16] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:32:16] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:32:16] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:33:00] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:33:00] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:33:00] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:33:00] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:33:00] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:33:00] "GET /static/brand_images/ChatGPT%20Image%2021%20oct%202025,%2009_28_01%20p.m..png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:33:38] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:33:38] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:33:38] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:33:38] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:33:38] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:33:38] "GET /static/brand_images/ChatGPT%20Image%2021%20oct%202025,%2009_28_01%20p.m..png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:33:38] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:34:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:34:16] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:34:16] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:34:16] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:34:16] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:34:16] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:34:16] "GET /static/brand_images/ChatGPT%20Image%2021%20oct%202025,%2009_28_01%20p.m..png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:34:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:34:16] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:34:16] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:34:16] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:34:16] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:34:16] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:34:16] "GET /static/brand_images/ChatGPT%20Image%2021%20oct%202025,%2009_28_01%20p.m..png HTTP/1.1" 404 -
+ * Detected change in 'C:\\Users\\admin\\Downloads\\PROYECTO_PEPSICO\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 457-253-663
+C:\Users\admin\Downloads\PROYECTO_PEPSICO\app.py:27: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+  return User.query.get(int(user_id))
+127.0.0.1 - - [21/Oct/2025 21:35:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:35:41] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:35:41] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:35:41] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:35:41] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:35:41] "GET /static/brand_images/ChatGPT%20Image%2021%20oct%202025,%2009_28_01%20p.m..png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:35:41] "GET /static/logo.png HTTP/1.1" 404 -
+ * Detected change in 'C:\\Users\\admin\\Downloads\\PROYECTO_PEPSICO\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 457-253-663
+C:\Users\admin\Downloads\PROYECTO_PEPSICO\app.py:27: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+  return User.query.get(int(user_id))
+127.0.0.1 - - [21/Oct/2025 21:37:20] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:37:20] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:37:20] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:37:20] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:37:20] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:37:20] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:37:20] "GET /static/brand_images/camion.png HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:37:27] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:37:27] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:37:28] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:38:38] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:38:38] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:38:38] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:38:38] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:38:38] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:38:38] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:38:38] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:38:38] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:38:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:38:43] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:38:43] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:38:43] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:38:43] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:38:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:38:46] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:38:46] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:38:46] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:38:46] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:38:46] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:38:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:38:46] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:38:46] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:38:46] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:38:46] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:38:48] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:38:48] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:38:48] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:39:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:39:01] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:01] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:39:01] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:39:01] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:01] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:39:05] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:05] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:05] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:39:32] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:33] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:39:33] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:33] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:33] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:39:33] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:33] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:39:33] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:33] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:39:33] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:33] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:39:33] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+ * Detected change in 'C:\\Users\\admin\\Downloads\\PROYECTO_PEPSICO\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 457-253-663
+127.0.0.1 - - [21/Oct/2025 21:39:45] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:39:45] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:45] "GET /static/login.css HTTP/1.1" 304 -
+ * Detected change in 'C:\\Users\\admin\\Downloads\\PROYECTO_PEPSICO\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 457-253-663
+C:\Users\admin\Downloads\PROYECTO_PEPSICO\app.py:27: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+  return User.query.get(int(user_id))
+127.0.0.1 - - [21/Oct/2025 21:39:59] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:39:59] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:39:59] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:59] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:59] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:39:59] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:40:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:40:49] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:40:49] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:40:49] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:40:49] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:40:49] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:40:49] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:41:37] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:41:37] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:41:37] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:42:48] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:42:48] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:42:48] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:42:48] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:42:48] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:42:48] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:42:48] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:42:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:42:50] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:42:50] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:42:50] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:42:50] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:42:50] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:42:50] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:42:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:42:50] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:42:50] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:42:50] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:42:50] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:42:50] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:42:50] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:43:08] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:43:08] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:43:08] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:43:08] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:43:08] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:43:08] "GET /static/login.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:43:08] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:43:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:43:11] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:43:11] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:43:11] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:43:11] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:43:11] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:43:11] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:43:18] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:43:18] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:43:18] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:43:18] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:43:18] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:43:18] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:43:18] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:44:37] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:44:37] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:44:37] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:44:37] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:44:37] "GET /static/login.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:44:37] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:44:37] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:47:48] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:47:48] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:47:48] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:47:48] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:47:48] "GET /static/login.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:47:48] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:47:48] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:49:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:49:01] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:49:01] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:49:01] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:49:01] "GET /static/login.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:49:01] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:49:01] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:49:34] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:49:34] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:49:34] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:49:34] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:49:34] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:49:34] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:49:34] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:49:59] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:49:59] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:49:59] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:49:59] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:49:59] "GET /static/login.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:49:59] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:49:59] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:40] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:50:40] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:50:40] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:40] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:40] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:50:40] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:42] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:50:42] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:42] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:50:42] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:42] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:42] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:42] "GET /vehicles HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:50:42] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:42] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:50:42] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:43] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:45] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:50:45] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:45] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:50:45] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:45] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:46] "GET /admin/users/new HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:50:46] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:46] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:46] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:50:46] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:47] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:50:47] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:50:47] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:47] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:47] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:49] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:50:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:50:50] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:50] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:50:50] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:50] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:50] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:55] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:55] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:50:55] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:52:21] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:52:21] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:52:21] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:52:21] "GET /static/login.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:52:21] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:52:21] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:52:22] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:52:22] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:52:22] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:52:22] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:52:22] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:52:26] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:52:26] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:52:26] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:52:26] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:52:26] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:52:26] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:52:26] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:52:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:52:41] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:52:41] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:52:41] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:52:41] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:52:41] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:52:41] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:53:25] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:53:25] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:53:25] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:53:25] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:53:25] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:53:25] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:53:27] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:53:27] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:53:27] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:53:27] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:53:27] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:53:59] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:53:59] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:53:59] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:53:59] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:53:59] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:54:01] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:54:01] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:54:01] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:54:10] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:54:10] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:54:10] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:54:10] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:54:10] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:54:10] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:54:10] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:54:12] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:54:12] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:54:12] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:54:12] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:54:12] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:00] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:00] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:00] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:55:12] "GET /admin/users/new HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:55:12] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:12] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:55:12] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:12] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:15] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:55:15] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:15] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:55:15] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:15] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:19] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:55:19] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:55:19] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:19] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:55:19] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:19] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:19] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:55:19] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:36] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:55:36] "GET /me/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:55:36] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:36] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:55:36] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:36] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:40] "GET /assignments/4/progress HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:55:40] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:40] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:55:40] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:40] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:42] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:55:42] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:55:42] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:42] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:55:42] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:42] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:42] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:47] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:55:47] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:55:47] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:47] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:47] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:55:47] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:48] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:55:48] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:48] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:55:48] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:55:48] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:57:13] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:57:13] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:57:13] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:57:13] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:57:13] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:57:13] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:57:13] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:57:13] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:57:54] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 21:57:54] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:57:54] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:57:54] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:57:54] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:57:54] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:57:55] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:57:55] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:57:55] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:57:55] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:57:55] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:58:03] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:58:03] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:58:03] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:58:03] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:58:03] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:59:24] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:59:24] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 21:59:24] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 21:59:24] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 21:59:24] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:01:45] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:01:45] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:01:45] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:01:45] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:01:45] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:02:04] "POST /admin/users/11/reset_password HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:02:04] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:02:04] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:02:04] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:02:04] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:02:19] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:02:19] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:02:19] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:03:31] "POST /admin/users/11/reset_password HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:03:31] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:03:31] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:03:31] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:03:31] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:03:38] "POST /admin/users/11/reset_password HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:03:38] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:03:38] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:03:38] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:03:38] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:03:39] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:03:39] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:03:39] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:03:39] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:03:39] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:03:42] "POST /admin/users/11/reset_password HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:03:42] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:03:42] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:03:42] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:03:42] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:04:38] "POST /admin/users/11/reset_password HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:04:38] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:04:38] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:04:38] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:04:38] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:04:44] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:04:44] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:04:44] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:04:44] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:04:44] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:04:46] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:04:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:04:46] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:04:46] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:04:46] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:04:46] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:04:46] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:04:52] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:04:52] "GET /me/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:04:52] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:04:52] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:04:52] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:04:52] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:05:47] "GET /assignments/6/progress HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:05:47] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:05:47] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:05:47] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:05:47] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:06:10] "GET /me/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:06:10] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:06:10] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:06:10] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:06:10] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:10] "GET /me/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:07:10] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:07:10] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:10] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:07:10] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:18] "GET /me/dashboard HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\app.py", line 38, in wrapped
+    return f(*args, **kwargs)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\app.py", line 175, in mechanic_dashboard
+    return render_template('mechanic_dashboard.html', mechanic=mech, assignments=assignments)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\templates\mechanic_dashboard.html", line 1, in top-level template code
+    {% extends 'layout.html' %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\templates\layout.html", line 123, in top-level template code
+    {% block scripts %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\templates\mechanic_dashboard.html", line 38, in block 'scripts'
+    const avatarUrl = {{ '"' + current_user.avatar_url + '"' if (current_user.is_authenticated and getattr(current_user, 'avatar_url', None)) else 'null' }};
+    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\jinja2\utils.py", line 92, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'getattr' is undefined
+127.0.0.1 - - [21/Oct/2025 22:07:18] "GET /me/dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:07:18] "GET /me/dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:07:19] "GET /me/dashboard?__debugger__=yes&cmd=resource&f=console.png&s=ck1ZUsnYv4kCJ44Plx1i HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:07:19] "GET /me/dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:07:20] "GET /me/dashboard HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\app.py", line 38, in wrapped
+    return f(*args, **kwargs)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\app.py", line 175, in mechanic_dashboard
+    return render_template('mechanic_dashboard.html', mechanic=mech, assignments=assignments)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\templates\mechanic_dashboard.html", line 1, in top-level template code
+    {% extends 'layout.html' %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\templates\layout.html", line 123, in top-level template code
+    {% block scripts %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\templates\mechanic_dashboard.html", line 38, in block 'scripts'
+    const avatarUrl = {{ '"' + current_user.avatar_url + '"' if (current_user.is_authenticated and getattr(current_user, 'avatar_url', None)) else 'null' }};
+    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\jinja2\utils.py", line 92, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'getattr' is undefined
+127.0.0.1 - - [21/Oct/2025 22:07:20] "GET /me/dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:20] "GET /me/dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:20] "GET /me/dashboard?__debugger__=yes&cmd=resource&f=console.png&s=ck1ZUsnYv4kCJ44Plx1i HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:20] "GET /me/dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:24] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:07:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:07:24] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:07:24] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:24] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:24] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:24] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:07:24] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:34] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:07:34] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:07:34] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:07:34] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:34] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:34] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:36] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:07:36] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:36] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:36] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:07:36] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:55] "POST /admin/users/11/reset_password HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:07:55] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:07:55] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:07:55] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:07:55] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:08:00] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:08:00] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:08:00] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:08:00] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:08:00] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:08:00] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:08:00] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:08:00] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:08:04] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:08:04] "GET /me/dashboard HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\app.py", line 38, in wrapped
+    return f(*args, **kwargs)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\app.py", line 175, in mechanic_dashboard
+    return render_template('mechanic_dashboard.html', mechanic=mech, assignments=assignments)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\templates\mechanic_dashboard.html", line 1, in top-level template code
+    {% extends 'layout.html' %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\templates\layout.html", line 123, in top-level template code
+    {% block scripts %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\templates\mechanic_dashboard.html", line 38, in block 'scripts'
+    const avatarUrl = {{ (current_user.avatar_url if (current_user.is_authenticated and getattr(current_user, 'avatar_url', None)) else None) | tojson }};
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\jinja2\utils.py", line 92, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'getattr' is undefined
+127.0.0.1 - - [21/Oct/2025 22:08:04] "GET /me/dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:08:04] "GET /me/dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:08:04] "GET /me/dashboard?__debugger__=yes&cmd=resource&f=console.png&s=ck1ZUsnYv4kCJ44Plx1i HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:09:37] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:09:37] "GET /me/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:09:37] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:09:37] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:09:37] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:09:37] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:10:37] "GET /me/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:10:37] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:10:37] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:10:37] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:10:37] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:10:53] "GET /assignments/6/progress HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:10:53] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:10:53] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:10:53] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:10:53] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:10:58] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:10:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:10:58] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:10:58] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:10:58] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:10:58] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:10:59] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:11:59] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:11:59] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:11:59] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:11:59] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:11:59] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:11:59] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:11:59] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:12:00] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:12:00] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:12:00] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:12:00] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:12:00] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:12:00] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:12:00] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:13:07] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:13:07] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:13:07] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:13:07] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:13:07] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:13:07] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:13:07] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:21] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:15:21] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:15:21] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:21] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:15:21] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:21] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:23] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:15:23] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:23] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:23] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:15:23] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:29] "GET /vehicles HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:15:29] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:15:29] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:29] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:15:29] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:46] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:15:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:15:46] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:46] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:15:46] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:46] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:46] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:15:46] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:47] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:15:47] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:15:47] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:47] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:47] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:15:47] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:15:47] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:09] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:17:09] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:17:09] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:17:09] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:09] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:09] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:11] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:17:11] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:11] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:17:11] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:11] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:20] "GET /admin/users/new HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:17:20] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:20] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:17:20] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:20] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:32] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:17:32] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:17:32] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:32] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:17:32] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:54] "POST /admin/users/6/reset_password HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:17:54] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:54] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:17:54] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:54] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:59] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:17:59] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:17:59] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:17:59] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:00] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:01] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:18:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:18:01] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:01] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:18:01] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:01] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:01] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:11] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:18:11] "GET /dashboard HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:18:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:18:11] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:11] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:18:11] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:11] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:11] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:19] "GET /sales/return/new HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:18:19] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:19] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:18:19] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:19] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:39] "POST /sales/return/new HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:18:39] "GET /sales/return/4 HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\app.py", line 38, in wrapped
+    return f(*args, **kwargs)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\app.py", line 340, in sales_return_detail
+    return render_template('sales_return_detail.html', record=rr)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\templates\sales_return_detail.html", line 1, in top-level template code
+    {% extends 'layout.html' %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\templates\layout.html", line 120, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\templates\sales_return_detail.html", line 4, in block 'content'
+    <p><strong>Vehículo:</strong> {{ record.vehicle.plate }}</p>
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\admin\Downloads\PROYECTO_PEPSICO\.venv\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'models.ReturnRecord object' has no attribute 'vehicle'
+127.0.0.1 - - [21/Oct/2025 22:18:39] "GET /sales/return/4?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:18:39] "GET /sales/return/4?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:18:39] "GET /sales/return/4?__debugger__=yes&cmd=resource&f=console.png&s=ck1ZUsnYv4kCJ44Plx1i HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:18:39] "GET /sales/return/4?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:18:45] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:18:45] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:18:45] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:18:45] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:45] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:45] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:18:45] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:18:45] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:19:56] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:19:56] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:19:56] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:19:56] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:19:56] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:19:56] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:19:57] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:19:57] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:19:57] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:19:57] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:19:57] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:00] "GET /vehicles HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:20:00] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:00] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:20:00] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:00] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:04] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:20:04] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:04] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:20:04] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:04] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:11] "POST /admin/users/2/reset_password HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:20:11] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:11] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:20:11] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:11] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:17] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:20:17] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:17] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:20:17] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:17] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:18] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:20:18] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:20:18] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:18] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:20:18] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:18] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:18] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:29] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:20:29] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:20:29] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:29] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:20:29] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:29] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:30] "GET /vehicles HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:20:31] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:31] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:20:31] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:31] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:33] "GET /vehicles/4/assign HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:20:33] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:33] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:20:33] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:20:33] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:23:02] "GET /vehicles/4/assign HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:23:02] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:23:02] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:23:02] "GET /static/login.css HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:23:02] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:04] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:29:04] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:29:04] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:29:04] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:04] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:04] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:04] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:29:04] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:09] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:29:09] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:29:09] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:09] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:29:09] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:09] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:10] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:29:10] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:10] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:10] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:29:10] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:16] "POST /admin/users/5/reset_password HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:29:16] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:16] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:29:16] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:16] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:18] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:29:18] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:29:18] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:18] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:18] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:21] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:29:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:29:21] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:21] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:29:21] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:21] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:21] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:27] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:29:27] "GET /guard/entry/new HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:29:27] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:27] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:29:27] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:29:27] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:03] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:30:03] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:30:03] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:03] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:30:03] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:03] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:03] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:30:03] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:08] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:30:08] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:30:08] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:08] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:30:08] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:08] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:09] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:30:09] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:09] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:30:09] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:09] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:26] "POST /admin/users/12/reset_password HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:30:26] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:30:26] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:26] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:26] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:33] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:30:33] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:33] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:33] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:30:33] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:34] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:30:34] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:30:34] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:34] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:30:34] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:34] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:34] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:42] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:30:42] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:30:42] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:42] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:42] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:30:42] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:44] "GET /reception/workorders HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:30:44] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:44] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:30:44] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:30:44] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:03] "GET /reception/workorders/1 HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:31:03] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:03] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:31:03] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:03] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:09] "GET /reception/workorders/new HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:31:09] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:09] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:31:09] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:09] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:44] "GET /reception/workorders/1 HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:31:44] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:44] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:44] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:31:44] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:48] "GET /reception/workorders/1/mark_duplicate HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:31:48] "GET /reception/workorders/1 HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:31:48] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:48] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:31:48] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:48] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:51] "GET /reception/workorders/1 HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:31:53] "GET /reception/workorders/1 HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:31:53] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:53] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:53] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:31:53] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:58] "GET /reception/workorders/new HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:31:58] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:58] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:31:58] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:31:58] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:03] "POST /reception/workorders/new HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:32:03] "GET /reception/workorders HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:32:03] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:32:03] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:03] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:03] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:07] "GET /reception/workorders/2 HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:32:07] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:07] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:07] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:32:07] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:10] "GET /reception/workorders/2/unblock HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:32:10] "GET /reception/workorders/2 HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:32:10] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:10] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:32:10] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:10] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:12] "GET /reception/workorders/2/mark_duplicate HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:32:12] "GET /reception/workorders/2 HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:32:12] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:12] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:32:12] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:12] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:15] "GET /reception/workorders/2 HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:32:23] "GET /reception/workorders HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:32:23] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:23] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:32:23] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:23] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:32] "GET /reception/workorders/2 HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:32:32] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:32] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:32:32] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:32] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:35] "GET /reception/workorders/new HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:32:35] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:35] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:32:35] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:32:35] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+ * Detected change in 'C:\\Users\\admin\\Downloads\\PROYECTO_PEPSICO\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 457-253-663
+ * Detected change in 'C:\\Users\\admin\\Downloads\\PROYECTO_PEPSICO\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 457-253-663
+C:\Users\admin\Downloads\PROYECTO_PEPSICO\app.py:27: LegacyAPIWarning: The Query.get() method is considered legacy as of the 1.x series of SQLAlchemy and becomes a legacy construct in 2.0. The method is now available as Session.get() (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+  return User.query.get(int(user_id))
+127.0.0.1 - - [21/Oct/2025 22:34:57] "GET /reception/workorders/new HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:34:57] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:34:57] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:34:57] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:34:57] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:35:07] "POST /reception/workorders/new HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:35:07] "GET /reception/workorders HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:35:07] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:35:07] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:35:07] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:35:07] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:35:10] "GET /reception/workorders/3 HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:35:10] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:35:10] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:35:10] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:35:10] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:35:12] "GET /reception/workorders/3/unblock HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:35:12] "GET /reception/workorders/3 HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:35:12] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:35:12] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:35:12] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:35:12] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:35:14] "GET /reception/workorders/3 HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:36:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:36:11] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:11] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:36:11] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:11] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:11] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:36:11] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:29] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:36:29] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:36:29] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:29] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:36:29] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:29] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:31] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:36:31] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:31] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:36:31] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:31] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:50] "POST /admin/users/11/reset_password HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:36:50] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:50] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:36:50] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:50] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:52] "GET /admin/users HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:36:52] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:52] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:36:52] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:52] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:54] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:36:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:36:54] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:54] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:54] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:36:54] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:36:54] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:37:01] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:37:01] "GET /me/dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:37:01] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:37:01] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:37:01] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:37:01] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:37:05] "GET /assignments/6/progress HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:37:06] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:37:06] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:37:06] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:37:06] "GET /static/brand_images/camion.png HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:37:08] "GET /logout HTTP/1.1" 302 -
+127.0.0.1 - - [21/Oct/2025 22:37:08] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [21/Oct/2025 22:37:08] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:37:08] "GET /static/logo.png HTTP/1.1" 404 -
+127.0.0.1 - - [21/Oct/2025 22:37:08] "GET /static/login.css HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:37:08] "GET /static/brand_images/Flota%20de%20camiones2.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [21/Oct/2025 22:37:08] "GET /static/brand_images/camion.png HTTP/1.1" 304 -

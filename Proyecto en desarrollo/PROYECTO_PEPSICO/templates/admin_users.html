@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <div class="container">
+    <h2 class="mb-3">Usuarios del sistema</h2>
+    <div class="table-responsive admin-users-table-wrapper">
+      <table class="table table-striped table-hover admin-users-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Usuario</th>
+            <th>Rol</th>
+            <th>Password (hash)</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for u in users %}
+            <tr>
+              <td>{{ u.id }}</td>
+              <td>{{ u.username }}</td>
+              <td>{{ u.role }}</td>
+              <td class="password-cell">
+                <button class="btn btn-sm btn-outline-secondary copy-hash" data-hash="{{ u.password_hash }}" type="button">Copiar hash</button>
+              </td>
+              <td class="d-flex gap-2">
+                <form method="post" action="{{ url_for('admin_user_reset_password', user_id=u.id) }}" onsubmit="return confirm('Generar nueva contraseña temporal para {{ u.username }}? Esto la sobrescribirá.');">
+                  <button class="btn btn-sm btn-outline-primary" type="submit">Generar contraseña temporal</button>
+                </form>
+                <form method="post" action="{{ url_for('admin_user_delete', user_id=u.id) }}" onsubmit="return confirm('¿Eliminar al usuario {{ u.username }}? Esta acción no se puede deshacer.');">
+                  <button class="btn btn-sm btn-outline-danger" type="submit">Eliminar</button>
+                </form>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script>
+    // Copy-to-clipboard handler for admin user hashes
+    (function(){
+      function flash(button, msg){
+        const orig = button.innerText;
+        button.innerText = msg;
+        button.disabled = true;
+        setTimeout(()=>{ button.innerText = orig; button.disabled = false }, 1400);
+      }
+
+      document.querySelectorAll('.copy-hash').forEach(btn=>{
+        btn.addEventListener('click', async function(){
+          const hash = this.getAttribute('data-hash') || '';
+          try{
+            await navigator.clipboard.writeText(hash);
+            flash(this, 'Copiado');
+          }catch(e){
+            // fallback: create temporary textarea
+            const ta = document.createElement('textarea');
+            ta.value = hash; document.body.appendChild(ta); ta.select();
+            try{ document.execCommand('copy'); flash(this, 'Copiado'); }catch(e2){ flash(this, 'Error'); }
+            ta.remove();
+          }
+        });
+      });
+    })();
+  </script>
+{% endblock %}
